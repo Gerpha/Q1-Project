@@ -36,13 +36,7 @@
 
 <nav>
   <div class="nav-wrapper">
-    <form>
-      <div class="input-field">
-        <input id="search" type="search" required>
-        <label for="search"><i class="material-icons">search</i></label>
-        <i class="material-icons">close</i>
-      </div>
-    </form>
+
   </div>
 </nav>
 
@@ -52,11 +46,18 @@
 <div id="test4" class="col s12">Test 4</div> -->
 
 
-    <main>
-    <section>
-      <div>
-        
-      </div>
+    <main class="container row">
+      <section class="container col s6">
+        <form>
+          <div class="input-field">
+            <input id="search" type="text" name="search" value="" required>
+            <label for="search"><i class="material-icons"></i></label>
+            <button id="btn1" class="btn waves-effect waves-light" type="submit" name="action">submit</button>
+          </div>
+        </form>
+      <section class="col s12">
+        <ul class="airline"></ul>
+      </section>
     </section>
     </main>
     <footer class="page-footer">
@@ -79,7 +80,7 @@
          </div>
          <div class="footer-copyright">
            <div class="container">
-           © 2014 Copyright Text
+           © 2016 Copyright Skyfly
            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
            </div>
          </div>
