@@ -1,0 +1,11 @@
+header div .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 1em;
+  margin-right: 1em;
+}
