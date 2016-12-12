@@ -1,6 +1,4 @@
-Q1 Project
-
-
+Skyfly
 
 Scenario: User wants to view detailed info about an airline, aircraft, or airport
 Given I’m a user visiting the landing page of a website,

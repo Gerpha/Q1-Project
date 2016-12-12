@@ -2,44 +2,65 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+
     <title>Aviation Data</title>
   </head>
 
   <body>
-    <header class="">
-      <div class="container">
-        <section>
-          <hgroup>
-            <h1>Skyfly</h1>
-            <h2>Airline and Flight Info</h2>
-          </hgroup>
-        </section>
-        <nav>
-          <ul class="container">
-            <li><a href="index.html"></a>Home</li>
-            <li><a href=""></a>About</li>
-            <li><a href=""></a>Contact</li>
-          </ul>
-        </nav>
+    <nav class="nav-extended">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Skyfly</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="badges.html">About</a></li>
+      <li><a href="collapsible.html">Contact</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="badges.html">About</a></li>
+      <li><a href="collapsible.html">Contact</a></li>
+    </ul>
+
+    <ul class="tabs tabs-transparent">
+      <li class="tab"><a class="active" href="#airline">Airline</a></li>
+      <li class="tab"><a href="#flight">Flight</a></li>
+      <li class="tab disabled"><a href="#airport">Airport</a></li>
+      <li class="tab disabled"><a href="#country">Country</a></li>
+    </ul>
+  </div>
+</nav>
+
+<nav>
+  <div class="nav-wrapper">
+    <form>
+      <div class="input-field">
+        <input id="search" type="search" required>
+        <label for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
       </div>
-    </header>
+    </form>
+  </div>
+</nav>
+
+<!-- <div id="test1" class="col s12">Test 1</div>
+<div id="test2" class="col s12">Test 2</div>
+<div id="test3" class="col s12">Test 3</div>
+<div id="test4" class="col s12">Test 4</div> -->
+
+
     <main>
     <section>
       <div>
-        <nav>
-          <ul class="container">
-            <li><a href=""></a>Flight</li>
-            <li><a href=""></a>Airline</li>
-            <li><a href=""></a>Aircraft</li>
-          </ul>
-        </nav>
-        <label for="search">Enter flight or airline here</label>
-        <input type="text" autofocus="" name="search" id="search" value="">
+
       </div>
     </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./assets/main.js"></script>
   </body>
 </html>
