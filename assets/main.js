@@ -1,7 +1,5 @@
-var latt = []
-var long = []
-
-$(document).ready(function () {
+var latlong = []
+// $(document).ready(function () {
   getFlights()
 
   $("#btn1").click(function () {
@@ -12,10 +10,10 @@ $(document).ready(function () {
     getAirline(names)
     getAirports(names)
   })
-})
+//}) // end document.ready()
 
 function getAirline(names) {
-  $.get("https://iatacodes.org/api/v6/airlines?api_key=772513cb-42b7-4262-b735-00d2f52eb796&code=" + names, function(airline) {
+  $.getJSON("https://iatacodes.org/api/v6/airlines?api_key=772513cb-42b7-4262-b735-00d2f52eb796&code=" + names, function(airline) {
     $(".airline").html("")
     displayAirlineInfo(airline)
   })
@@ -36,11 +34,13 @@ function displayAirlineInfo(data) {
 }
 
 function getAirports(names) {
-  $.get("https://iatacodes.org/api/v6/airports?api_key=772513cb-42b7-4262-b735-00d2f52eb796&code=" + names, function(airport) {
+  $.getJSON("https://iatacodes.org/api/v6/airports?api_key=772513cb-42b7-4262-b735-00d2f52eb796&code=" + names, function(airport) {
     $(".airport").html("")
     displayAirportInfo(airport)
   })
 }
+
+
 
 function displayAirportInfo(data) {
   var ap = data.response[0]
@@ -57,8 +57,9 @@ function displayAirportInfo(data) {
 }
 
 function getFlights() {
-  $.get("https://iatacodes.org/api/v6/flights?api_key=772513cb-42b7-4262-b735-00d2f52eb796", function(flights) {
-    $(".flights").html("")
+  $.getJSON("https://iatacodes.org/api/v6/flights?api_key=772513cb-42b7-4262-b735-00d2f52eb796", function(flights) {
+    //$(".flights").html("")
+    localStorage.setItem("raw_data", flights)
     displayFlights(flights)
   })
 }
@@ -66,27 +67,35 @@ function getFlights() {
 function displayFlights(data) {
   for (var i = 0; i < data.response.length; i++) {
     var fl = data.response[i]
-    latt.push(fl.geography.lat)
-    long.push(fl.geography.lng)
+    //localStorage.getItem("raw_data")
+    var x = {"lat": fl.geography.lat, "lng": fl.geography.lng}
+    latlong.push(x);
   }
 }
-console.log(latt)
-console.log(long)
 
 function initMap() {
-  // for (var i = 0; i < latt.length; i++) {
-  //   var lit = latt[i]
-  // }
-  // for (var j = 0; j < long.length; j++) {
-  //   var lot = long[j]
-  // }
-  var uluru = {lat: 39.742043, lng: -104.991531};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: uluru
+
+  console.log(latlong)
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 3,
+    center: {lat: 39.742043, lng: -81.4183}
   });
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
+
+        // Create an array of alphabetical characters used to label the markers.
+
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+var markers = latlong.map(function(location, i) {
+  return new google.maps.Marker({
+    position: location,
+    label: "HHHHHHHHHH"
   });
-}
+});
+
+        // Add a marker clusterer to manage the markers.
+var markerCluster = new MarkerClusterer(map, markers,
+  {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
+} // end initMap()
