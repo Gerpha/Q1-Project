@@ -2,3 +2,8 @@
   margin-left: 3rem;
   margin-right: 3rem;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
