@@ -4,49 +4,45 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-       <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <title>Aviation Data</title>
   </head>
 
   <body>
-    <nav class="nav-extended">
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Skyfly</a>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="badges.html">About</a></li>
-      <li><a href="collapsible.html">Contact</a></li>
-    </ul>
-    <ul class="side-nav" id="mobile-demo">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="badges.html">About</a></li>
-      <li><a href="collapsible.html">Contact</a></li>
-    </ul>
 
-    <ul class="tabs tabs-transparent">
-      <li class="tab"><a class="active" href="#airline">Airline</a></li>
-      <li class="tab"><a href="#flight">Flight</a></li>
-      <li class="tab"><a href="#airport">Airport</a></li>
-      <li class="tab disabled"><a href="#country">Country</a></li>
-    </ul>
-  </div>
-</nav>
-
-<nav>
-  <div class="nav-wrapper">
-
-  </div>
-</nav>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Skyfly</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Home</a></li>
+          <li><a href="badges.html">About</a></li>
+          <li><a href="collapsible.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <main class="container row">
+      <div class="row">
+        <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#airline">Airline</a></li>
+        <li class="tab col s3"><a class="active" href="#airport">Airport</a></li>
+        <li class="tab col s3"><a href="#flights">Flights</a></li>
+        <li class="tab col s3 disabled"><a href="#disabledTab">Countries</a></li>
+      </ul>
+    <!-- </div>
+      <div id="test1" class="col s12">Test 1</div>
+      <div id="test2" class="col s12">Test 2</div>
+      <div id="test3" class="col s12">Test 3</div>
+      <div id="test4" class="col s12">Test 4</div>
+    </div> -->
       <section class="container col s6">
         <form>
           <div class="input-field">
             <input id="search" type="text" name="search" value="" required>
             <label for="search"><i class="material-icons"></i></label>
-            <button id="btn1" class="btn waves-effect waves-light" type="submit" name="action">submit</button>
+            <button id="btn1" class="btn waves-effect waves-light" type="submit" name="action">Search</button>
           </div>
         </form>
       <section class="col s12">
@@ -55,9 +51,6 @@
     </section>
 
     <div id="map"></div>
-
-
-
 
     </main>
     <footer class="page-footer">
@@ -85,7 +78,7 @@
        <script type="text/javascript" src="./assets/main.js"></script>
        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
        </script>
-       <script
+       <script async defer
        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAANwlpco8SRdEi96rem318RJFtj8RrMqM&callback=initMap">
        </script>
 
