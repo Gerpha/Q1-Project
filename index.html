@@ -6,51 +6,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <title>Aviation Data</title>
+    <title>Skyfly</title>
   </head>
 
-  <body class="blue-grey lighten-5">
+  <body>
 
-    <nav class="light-blue lighten-2">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Skyfly</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="collapsible.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
+    <nav class="width blue lighten-2">
+   <div class="nav-wrapper">
+     <a href="#" class="brand-logo center">skyfly</a>
+   </div>
+ </nav>
+<!-- <a class="waves-effect waves-light btn-large" href="#">Wave</a> -->
     <main class="container row">
-      <div class="row">
         <div class="col s12">
-          <ul class="blue-grey lighten-5 tabs">
-            <li class="tab col s3"><a class="active light-blue-text" href="#flights">Flights</a></li>
-            <li class="tab col s3"><a class="light-blue-text" href="#airline">Airline</a></li>
-            <li class="tab col s3 disabled"><a class="light-blue-text" href="#airport">Airport</a></li>
-            <li class="tab col s3 disabled"><a class="light-blue-text" href="#Countries">countries</a></li>
-          </ul>
-      <!-- <div>
-        <ul class="flinfo"></ul>
-      </div> -->
+          <ul class="blue darken-1 tabs">
+            <li class="tab col s6"><a class="active white-text waves-effect waves-light" href="#flights">Flights</a></li>
+            <li class="tab col s6"><a data-activates="slide-out" class="white-text waves-effect waves-light button-collapse" href=".button-collapse"><i class="material-icons">About</i></a></li>
+            <!-- <a href="#" data-activates="slide-out"<i class="material-icons">menu</i></a> -->
         </div>
-        <!-- <div class="col s12">
-           <ul id="airline" class="collapsible popout" data-collapsible="accordion">
-          <!- <ul class="airline"></ul> -->
-          <!-- <ul class="airline collapsible popout" data-collapsible="accordion"> -->
+
+        <div id="flights"></div>
+        <div id="about">
+
+
+  <ul id="slide-out" class="side-nav">
+    <li><div class="userView">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
 
 
 
-        </div>
-        <div id="flights" class="col s12">
-            <div id="map"></div>
-        </div>
-        <div id="#airport" class="col s12">
 
         </div>
-        <div id="#countries" class="col s12"></div>
-        </div>
+            <div id="map" class="col s12"></div>
+
+
       <!-- <section class="container col s6"> -->
         <!-- <form>
           <div class="input-field">
@@ -68,15 +69,15 @@
 
 
     </main>
-    <footer class="page-footer light-blue lighten-2">
+    <footer class="page-footer blue lighten-2">
          <div class="container">
            <div class="row">
-             <div class="col l6 s12">
-               <h5 class="white-text">Footer Content</h5>
-               <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+             <div class="footer-main">
+               <h5 class="white-text footer-main">It's not flying - just falling with style</h5>
+               <!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
              </div>
              <div class="col l4 offset-l2 s12">
-               <h5 class="white-text">Links</h5>
+               <!-- <h5 class="white-text">Links</h5> -->
 
              </div>
            </div>
@@ -84,7 +85,7 @@
          <div class="footer-copyright">
            <div class="container">
            © 2016 Copyright Skyfly
-           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+           <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
            </div>
          </div>
        </footer>

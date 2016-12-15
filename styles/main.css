@@ -1,9 +1,36 @@
-.nav-wrapper {
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
 #map {
   height: 500px;
   width: 100%;
+}
+
+.brand-logo {
+   font-family: "Hemi Head 426";
+   font-size: 5rem;
+}
+
+.width {
+    padding-bottom: 3rem;
+}
+
+
+body {
+  background-image: url(789a.jpg);
+  background-size: contain;
+}
+
+main {
+  padding-bottom: 0;
+}
+
+footer .page-footer {
+
+}
+
+.footer-main {
+  text-align: center;
+  font-family: "Hemi Head 426";
+}
+
+.footer-copyright {
+  text-align: center;
 }
