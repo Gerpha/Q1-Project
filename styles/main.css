@@ -2,16 +2,22 @@
   height: 600px;
   width: 100%;
   opacity: 0.9;
+  margin-bottom: 0;
+  padding: 0;
   /*filter: alpha(opacity=50);*/
 }
 
-.brand-logo {
+.fontsz {
    font-family: "Hemi Head 426";
-   font-size: 5rem;
+   font-size: 3rem;
 }
 
-.width {
-    padding-bottom: 3rem;
+.no-padding {
+  padding: 0;
+}
+
+.pad-free {
+  padding: 0;
 }
 
 .background {
@@ -27,12 +33,25 @@
 }
 
 body {
-  background-image: url(789a.jpg);
-  background-size: contain;
+  /*max-width: 100%;*/
+  background-image:url(789a.jpg);
+  background-repeat:no-repeat;
+  /*background-size:contain;*/
+  background-position:center;
+  background-size: 100%;
+  margin-bottom: 0;
+
+  /*background-image: url(789a.jpg);
+  background-size: 100%;*/
 }
 
 main {
   padding-bottom: 0;
+}
+
+footer.no-margin-top {
+  margin-top: 0;
+  /* padding-top: 0; */
 }
 
 .footer-main {
