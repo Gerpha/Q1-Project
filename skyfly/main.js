@@ -1,78 +1,15 @@
 $(document).ready(function () {
 
-  // Initialize collapse button
   $(".button-collapse").sideNav();
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  //$('.collapsible').collapsible();
 
   getFlights();
 
-  //  $(document).ready(function(){
-  //   $('ul.tabs').tabs('select_tab', 'tab_id');
-  // });
-  //
-  // //$("#planes").click(function () {
-  //   //event.preventDefault()
-  //addEvent()
-  //)}
-
-  // $("#btn1").click(function () {
-  //   event.preventDefault()
-  //   var $title = $("input[name=search]")
-  //   var names = $title.val()
-  //   $title.val('')
-  //   //getAirports(names)
-  //   getAirline(names)
-  //
-  // })
 }) // end document.ready()
 
 var latlong = [];
 var map;
 var markers;
 var image;
-
-// function getAirline(names) {
-//   $.getJSON("https://iatacodes.org/api/v6/airlines?api_key=772513cb-42b7-4262-b735-00d2f52eb796&code=" + names, function(airline) {
-//     $(".airline").html("")
-//     displayAirlineInfo(airline)
-//   })
-// }
-//
-// function displayAirlineInfo(data) {
-//     var x = data.response[0]
-//     var validData = {}
-//     for (var key in x) {
-//       if (x[key] !== null) {
-//        validData[key] = x[key]
-//        var $li = $('<li>')
-//        var k = key + ": " + x[key]
-//        $li.text(k)
-//        $(".airline").append($li)
-//       }
-//     }
-// }
-//
-// function getAirports(names) {
-//   $.getJSON("https://iatacodes.org/api/v6/airports?api_key=772513cb-42b7-4262-b735-00d2f52eb796&code=" + names, function(airport) {
-//     $(".airport").html("")
-//     displayAirportInfo(airport)
-//   })
-// }
-//
-// function displayAirportInfo(data) {
-//   var ap = data.response[0]
-//   var apObj = {}
-//   for (var key in ap) {
-//     if (ap[key] !== null) {
-//       apObj[key] = ap[key]
-//       var $aplist = $("<li>")
-//       var p = key + ": " + ap[key]
-//       $aplist.text(p)
-//       $(".airport").append($aplist)
-//     }
-//   }
-// }
 
 function getFlights() {
   $.getJSON("https://iatacodes.org/api/v6/flights?api_key=772513cb-42b7-4262-b735-00d2f52eb796", function(flights) {
@@ -114,10 +51,10 @@ function displayFlights(data) {
   }
 
   var image = {
-    url: "http://www.clker.com/cliparts/T/i/o/c/X/Q/airplane-hi.png", // url
-    scaledSize: new google.maps.Size(28, 28), // scaled size
-    origin: new google.maps.Point(0,0), // origin
-    anchor: new google.maps.Point(0, 0) // anchor
+    url: "http://www.clker.com/cliparts/T/i/o/c/X/Q/airplane-hi.png",
+    scaledSize: new google.maps.Size(28, 28),
+    origin: new google.maps.Point(0,0),
+    anchor: new google.maps.Point(0, 0)
 };
 
   markers = latlong.map(function(location, i) {

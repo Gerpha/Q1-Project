@@ -1,39 +1,12 @@
 Skyfly
 
-Scenario: User wants to view detailed info about an airline, aircraft, or airport
-Given I’m a user visiting the landing page of a website,
-When I enter a flight number, airline, or airport name or code,
-And I click “Search”
-Then it pulls up whatever matches my input
-And I can see all the info about the flight, airline, or airport
+I imagined my app as a powerful tool to monitor and track flights and delays as well as show airport locations and information.
+I also wanted it to be able to search up any plane and see every detail about it, i.e. when it was built, who owns it, what its on-time percentage is, etc.
 
-As a user,
-When I visit the landing page,
-I want an input box so I can search for all flights,
-And see their speed, elevation, and location.
+I still plan to fully developing it that way, but as my Quarter 1 project I didn't have enough time to develop it as powerful as I want.
 
-As a user,
-When I search for an airline in the search box
-I want to see detailed info relating to that airline
-So it can direct me to their website, etc
+The features of the app are simple and straight-forward, but still quite powerful. You can simultaneously view all current flights in real time, and then click on each one to see the flight number, departure and arrival info, speed, elevation, and callsign.
 
-As a user,
-When I search for an airport in the search box
-I want to see detailed info relating to that airport
-So it can direct me to their website, etc
+I definitely plan to do the same with all the world airports, where you can view them all at once or search them separately, then they'll have a window with website and contact information.
 
-As a user,
-When I click search and it brings up my specified content,
-I want to click on that item
-So I can view all the detailed information
-
-Given I’m l
-When I’m viewing information on a page
-And I want to go back to the main landing page
-Then I want to have a “Home” button in the top right hand corner
-So I can click on it and be taken back home
-
-As a user,
-When I click on the “About” button in the top right hand corner,
-I want to see info about the developer and site, etc.
-So I can call him up and give him an awesome job ;)
+I also plan to include all airlines and their contact information, and make everything searchable by airline, airport, flight number, or departure and arrival info.

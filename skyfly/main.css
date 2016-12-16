@@ -4,10 +4,9 @@
   opacity: 0.9;
   margin-bottom: 0;
   padding: 0;
-  /*filter: alpha(opacity=50);*/
 }
 
-.fontsz {
+.nav-wrapper {
    font-family: "Hemi Head 426";
    font-size: 3rem;
 }
@@ -15,10 +14,6 @@
 .no-padding {
   padding: 0;
 }
-/*
-.pad-free {
-  padding: 0;
-}*/
 
 .background {
   background-image: url("http://wallpapercave.com/wp/CvxhQoU.jpg");
@@ -34,17 +29,12 @@
 }
 
 body {
-  /*max-width: 100%;*/
   margin-top: 0;
   background-image:url("assets/789a.jpg");
   background-repeat:no-repeat;
-  /*background-size:contain;*/
   background-position: center;
   background-size: cover;
   margin-bottom: 0;
-
-  /*background-image: url(789a.jpg);
-  background-size: 100%;*/
 }
 
 main {
@@ -54,6 +44,8 @@ main {
 .footer-main {
   text-align: center;
   font-family: "Hemi Head 426";
+  font-size: 1.5rem;
+  margin-top: 0;
 }
 
 .footer-copyright {
