@@ -1,0 +1,61 @@
+#map {
+  height: 600px;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 0;
+  padding: 0;
+  /*filter: alpha(opacity=50);*/
+}
+
+.fontsz {
+   font-family: "Hemi Head 426";
+   font-size: 3rem;
+}
+
+.no-padding {
+  padding: 0;
+}
+/*
+.pad-free {
+  padding: 0;
+}*/
+
+.background {
+  background-image: url("http://wallpapercave.com/wp/CvxhQoU.jpg");
+  background-size: cover;
+
+}
+
+.circle {
+  background-image: url("assets/IMG_0974.JPG");
+  background-size: cover;
+  background-position: center;
+  transform: rotate(180deg);
+}
+
+body {
+  /*max-width: 100%;*/
+  margin-top: 0;
+  background-image:url("assets/789a.jpg");
+  background-repeat:no-repeat;
+  /*background-size:contain;*/
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0;
+
+  /*background-image: url(789a.jpg);
+  background-size: 100%;*/
+}
+
+main {
+  padding-bottom: 0;
+}
+
+.footer-main {
+  text-align: center;
+  font-family: "Hemi Head 426";
+}
+
+.footer-copyright {
+  text-align: center;
+}
